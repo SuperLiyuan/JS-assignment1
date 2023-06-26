@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> <!-- Header start -->
+    <meta charset="UTF-8"> <!-- Charset meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive meta -->
+    <title>Document</title> <!-- Title -->
+</head> <!-- Header end -->
+<body> <!-- Body start -->
+    <div style="width: 70%; background-color: lightpink; margin: auto; padding: 5px;box-sizing: border-box;"> <!-- Container -->
+    <header> <!-- Header start -->
+        <h1 id="top">Basic Geometry</h1> <!-- Heading -->
+        <p>In this section, we are going to find the Area of some two-dimension shapes</p> <!-- Description -->
+        <p>You can click on any shape below:</p> <!-- Instruction -->
+    </header> <!-- Header end -->
+    <main> <!-- Main start -->
+        <div> <!-- Section list start -->
+            <ul> <!-- List start -->
+                <li><a href="#circle">Circle</a></li> <!-- Circle link -->
+                <li><a href="#triangle">Triangle</a></li> <!-- Triangle link -->
+                <li><a href="#square">Square</a></li> <!-- Square link -->
+                <li><a href="#rectangle">Rectangle</a></li> <!-- Rectangle link -->
+            </ul> <!-- List end -->
+        </div> <!-- Section list end -->
+        <!-- Circle section start -->
+        <section id="circle" style="width: 65%;background-color:pink; border-style: dotted; margin: 20px auto; padding: 5px;box-sizing: border-box;"> <!-- Circle section -->
+            <h2>Circle Area</h2> <!-- Heading -->
+            <!-- Input fields start -->
+            <div>
+                <label for="radius">Enter the value of the circle's radius:</label> <!-- Label -->
+                <input type="text" id="radius"> <!-- Input -->
+            </div>
+            <div>
+                <label for="circle-area">Result:</label> <!-- Label -->
+                <input type="text" id="circle-area" readonly> <!-- Result -->
+            </div>
+            <!-- Input fields end -->
+            <button onclick="circleArea()">Calculate</button> <!-- Button -->
+            <!-- Navigation start -->
+            <div class="go" style="margin: auto;">
+                <a href="#top">Go to top</a> <!-- Link -->
+            </div>
+            <!-- Navigation end -->
+        </section> <!-- Circle section end -->
+        <!-- Triangle section start -->
+        <section id="triangle" style="width: 65%;background-color:pink; border-style: dotted; margin: 20px auto; padding: 5px;box-sizing: border-box;"> <!-- Triangle section -->
+            <h2>Triangle Area</h2> <!-- Heading -->
+            <!-- Input fields start -->
+            <div>
+                <label for="triangle-base">Enter the value of the triangle's base:</label> <!-- Label -->
+                <input type="text" id="triangle-base"> <!-- Input -->
+                <BR> 
+                <label for="vertical-height">Enter the value of the triangle's vertical height:</label> <!-- Label -->
+                <input type="text" id="vertical-height"> <!-- Input -->
+            </div>
+            <div>
+                <label for="triangle-area">Result:</label> <!-- Label -->
+                <input type="text" id="triangle-area" readonly> <!-- Result -->
+            </div>
+            <!-- Input fields end -->
+            <button onclick="triangleArea()">Calculate</button> <!-- Button -->
+            <!-- Navigation start -->
+            <div class="go" style="margin: auto;">
+                <a href="#top">Go to top</a> <!-- Link -->
+            </div>
+            <!-- Navigation end -->
+        </section> <!-- Triangle section end -->
+        <!-- Square section start -->
+        <section id="square" style="width: 65%;background-color:pink; border-style: dotted; margin: 20px auto; padding: 5px;box-sizing: border-box;"> <!-- Square section -->
+            <h2>Square Area</h2> <!-- Heading -->
+            <!-- Input fields start -->
+            <div>
+                <label for="square-base">Enter the value of the square's base:</label> <!-- Label -->
+                <input type="text" id="square-base"> <!-- Input -->
+            </div>
+            <div>
+                <label for="square-area">Result:</label> <!-- Label -->
+                <input type="text" id="square-area" readonly> <!-- Result -->
+            </div>
+            <!-- Input fields end -->
+            <button onclick="squareArea()">Calculate</button> <!-- Button -->
+            <!-- Navigation start -->
+            <div class="go" style="margin: auto;">
+                <a href="#top">Go to top</a> <!-- Link -->
+            </div>
+            <!-- Navigation end -->
+        </section> <!-- Square section end -->
+        <!-- Rectangle section start -->
+        <section id="rectangle" style="width: 65%;background-color:pink; border-style: dotted; margin: 20px auto; padding: 5px;box-sizing: border-box;"> <!-- Rectangle section -->
+            <h2>Rectangle Area</h2> <!-- Heading -->
+            <!-- Input fields start -->
+            <div>
+                <label for="rectangle-base">Enter the value of the rectangle's base:</label> <!-- Label -->
+                <input type="text" id="rectangle-base"> <!-- Input -->
+                <BR>
+                <label for="rectangle-height">Enter the value of the rectangle's height:</label> <!-- Label -->
+                <input type="text" id="rectangle-height"> <!-- Input -->
+            </div>
+            <div>
+                <label for="rectangle-area">Result:</label> <!-- Label -->
+                <input type="text" id="rectangle-area" readonly> <!-- Result -->
+            </div>
+            <!-- Input fields end -->
+            <button onclick="rectangleArea()">Calculate</button> <!-- Button -->
+            <!-- Navigation start -->
+            <div class="go" style="margin: auto;">
+                <a href="#top">Go to top</a> <!-- Link -->
+            </div>
+            <!-- Navigation end -->
+        </section> <!-- Rectangle section end -->
+    </main> <!-- Main end -->
+    <footer> <!-- Footer start -->
+
+    </footer> <!-- Footer end -->
+</div> <!-- Container end -->
+<script>
+    function circleArea() { // Circle function 
+        let radius = parseInt(document.getElementById("radius").value.trim()); // Get radius 
+        const area = Math.PI * radius * radius; // Calculate area 
+        document.getElementById("circle-area").value = area; // Set result 
+    }
+    
+    function triangleArea() { // Triangle function 
+        const base = parseInt(document.getElementById("triangle-base").value.trim()); // Get base 
+        const vertical = parseInt(document.getElementById("vertical-height").value.trim()); // Get height 
+        const area = 0.5 * base * vertical; // Calculate area 
+        document.getElementById("triangle-area").value = area; // Set result 
+    }
+    
+    function squareArea() { // Square function 
+        const base = parseInt(document.getElementById("square-base").value.trim()); // Get base 
+        const area = base * base; // Calculate area 
+        document.getElementById("square-area").value = area; // Set result 
+    }
+    
+    function rectangleArea() { // Rectangle function 
+        const base = parseInt(document.getElementById("rectangle-base").value.trim()); // Get base 
+        const height = parseInt(document.getElementById("rectangle-height").value.trim()); // Get height 
+        const area = base * height; // Calculate area 
+        document.getElementById("rectangle-area").value = area; // Set result 
+    }
+</script>
+
+    
+</body> <!-- Body end -->
+</html> <!-- HTML end -->
